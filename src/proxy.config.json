@@ -1,0 +1,56 @@
+{
+    "/totvs-rest": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/totvs-login": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    },
+    "/josso": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "pathRewrite": {
+        "^/josso": ""
+      },
+      "headers": {
+        "Authorization": "Basic ci5yYWltdW5kbzpBbmluaEAxMzMxMTkxOA=="
+      }
+    },
+    "/dts/datasul-rest": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "headers": {
+        "Authorization": "Basic ci5yYWltdW5kbzpBbmluaEAxMzMxMTkxOA=="
+      }
+    },
+    "/dts/datasul-login": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "headers": {
+        "Authorization": "Basic ci5yYWltdW5kbzpBbmluaEAxMzMxMTkxOA=="
+      }
+    },
+    "/api": {
+      "target": "https://combio-dts-prod-prime.totvscloud.com.br",
+      "secure": false,
+      "changeOrigin": true,
+      "logLevel": "debug",
+      "headers": {
+        "Authorization": "Basic ci5yYWltdW5kbzpBbmluaEAxMzMxMTkxOA==",
+        "Datasul" : "Teste header"
+
+      }
+    }
+  }
+  

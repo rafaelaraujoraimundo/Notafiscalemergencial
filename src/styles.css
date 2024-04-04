@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+input.po-datepicker {
+    --font-size: 12px;
+    }
+
+po-datepicker po-button[p-kind="tertiary"] {
+    --padding: 1px;
+    }
+
+input.po-input {
+    --font-size: 12px;
+    }
+
+.po-button-pesquisa {
+    --border-radius: 25px;
+    --padding: 30px;
+    }
+
+:root {
+    --font-size: 12px;
+    --color: rgb(6, 68, 6);
+    --white-space: nowrap;
+    --overflow: hidden;
+}

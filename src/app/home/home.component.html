@@ -1,0 +1,136 @@
+<po-toolbar p-title="Produção - Combio"></po-toolbar>
+
+<po-page-default p-title="Painel de Notas Fiscais - Datasul">
+  <po-container class="">
+    <div class="po-row">
+      <po-widget
+      p-title="Parametros de Busca de Documentos">
+      <form [formGroup]="form">
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="openingDateStart"
+            p-label="Abert. Início"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="openingDateEnd"
+            p-label="Abert. Fim"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="issueDateStart"
+            p-label="Emissão Início"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="issueDateEnd"
+            p-label="Emissão Fim"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="transactionDateStart"
+            p-label="Transação Início"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-datepicker
+            formControlName="transactionDateEnd"
+            p-label="Transação Fim"
+            p-required="true"
+            p-format="dd/mm/yyyy"
+          ></po-datepicker>
+          <!-- Input Fields -->
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-input
+            formControlName="pedidoStart"
+            p-label="Pedido De"
+            p-required="true"
+            p-mask="9999999"
+            p-clean
+            p-placeholder="Pedido De"
+          ></po-input>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-input
+            formControlName="pedidoEnd"
+            p-label="Pedido Até"
+            p-required="true"
+            p-mask="9999999"
+            p-clean
+            p-placeholder="Pedido Até"
+          ></po-input>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <!-- Solicitação Fluig Range -->
+          <po-input
+            formControlName="solicitacaoFluigStart"
+            p-label="Sol. Fluig De"
+            p-required="true"
+            p-mask="9999999"
+            p-clean
+            p-placeholder="Solicitação Fluig De"
+          ></po-input>
+        </div>
+        <div class="po-md-1 po-lg-1 po-mt-1">
+          <po-input
+            formControlName="solicitacaoFluigEnd"
+            p-label="Sol. Fluig Até"
+            p-required="true"
+            p-mask="9999999"
+            p-clean
+            p-placeholder="Sol. Fluig Até"
+          ></po-input>
+        </div>
+              <div
+            class="po-xl-2 po-lg-2 po-sm-2 "
+            style="display: flex; justify-content: center; align-items: center;"
+          >
+            <po-button
+            class="po-button-pesquisa"
+              p-type="submit"
+              (p-click)="submitForm()"
+              p-label="Pesquisar"
+              [p-disabled]="!form.valid"
+            ></po-button>
+       
+        </div>
+      </form>
+     </po-widget>
+      <div class="po-row mt-2">
+        <div class="po-md-12 po-lg-12 po-mt-12 mt-6">
+          <po-table class="po-table2"
+          
+            (p-show-more)="loadNextPage()"
+            [p-columns]="colunasTabelaPrincipal"
+            [p-items]="itensTabelaPrincipal"
+            p-checkbox="true"
+            (p-collapsed)="onCollapseDetail()"
+            [p-loading]="loadingTable"
+            [p-selectable-entire-line]="bTrue"
+            [p-single-select]="bTrue"
+            [p-hide-columns-manager]="bTrue"
+            [p-show-more-disabled]="bHasNext"
+            p-checkbox-visible="false"
+            [p-spacing]="tamanhoTable"
+                     >
+          </po-table>
+        </div>
+      </div>
+    </div>
+  </po-container>
+</po-page-default>
